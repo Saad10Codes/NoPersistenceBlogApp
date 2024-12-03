@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container-fluid">
+    <div class="blog-text-container">
+        <div class="row">
+            <h1><%= blogName %> </h1>
+            <p class="main-text">
+                <%= blogValue %>
+            </p>
+        </div>
+        <div class="row">
+            <form action="/create" method="post">
+                <button type="submit" name="edit" value="<%= blogName %>">Edit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/addBlog" method="post">
+    <div class="container-fluid">
+        <div class="row">
+            <label for="name">
+                Blog Name
+            </label>
+            <input type="text" name="name" id="name" placeholder="Enter the name of the blog" <% if(locals.prevName){ %>value="<%=prevName%>"<% } %> required="true">
+        </div>
+
+        <div class="row">
+            <label for="text">Main Blog</label>
+            <textarea name="text" id="text" placeholder="Start writing here...">
+                <% if(locals.prevText){ %>
+                <%= prevText %> <% } %>
+            </textarea>
+        </div>
+        <div class="row">
+            <button type="submit" value="Submit">Save the blog</button>
+        </div>
+    </div> 
+</form>
